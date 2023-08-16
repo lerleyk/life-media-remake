@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Tilt+Prism&display=swap');
+:root{
+    font-size: 20px;
+    --color:rgb(0, 0, 0);
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;   
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25rem;
+    background: url(background.svg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  
+    
+}
+
+
+header > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+header > div > * {
+    filter: drop-shadow(0px 0px 0.25rem white);
+    text-shadow:0px 0px 0.25rem white ;
+}
+
+a{
+    color: black;
+}
+
+header img{
+    width: 20rem;
+}
+
+header > div > a{
+    padding: 0.5rem 1rem ;
+    background:linear-gradient(90deg, rgba(19,138,219,1) 0%, rgba(19,138,219,1) 33%, rgba(69,233,99,1) 68%, rgba(69,233,99,1) 100%);
+    background-size: 400% 100%;
+    background-position-x: 0%;
+    background-position-y: 50%;
+    border-radius:  1rem;
+    box-shadow: 1px 1px black;
+    text-decoration: none;
+    transition: 600ms;
+    text-shadow: 0 0 white;
+    color: white;
+}
+
+header > div > a:hover{
+    background-position-x: 100%;
+    box-shadow: 1px 1px 6px white;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    max-width: 20rem;
+    box-shadow: 10px 6px 17px 8px black;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    border-radius:0 0 1rem 1rem;
+    padding: 1rem 0;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    padding: 0 1rem;
+}
+
+main{
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: "a a b"
+                         "c d d";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.grid > div {
+    border-radius: 0.5rem;
+}
+
+.grid > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.grid.first > .a {
+    grid-area: a;
+    background: #9ae945;
+    color: black;
+}
+
+.grid.first > .b {
+    grid-area: b;
+    background: #138adb;
+    color: white;
+}
+
+.grid.first > .c {
+    grid-area: c;
+    background: #9ae945;
+    color: black;
+}
+
+.grid.first > .d {
+    grid-area: d;
+    background: #138adb;
+    color: white;
+}
+
+.grid.second > .a {
+    grid-area: a;
+    background: #138adb;
+    color: white;
+}
+
+.grid.second > .b {
+    grid-area: b;
+    background: #9ae945;
+    color: black;
+}
+
+.grid.second > .c {
+    grid-area: c;
+    background: #138adb;
+    color: white;
+}
+
+.grid.second > .d {
+    grid-area: d;
+    background: #9ae945;
+    color: black;
+}
+    
+
+.grid.second{
+    grid-template-areas: "a b b"
+                         "c c d";
+}
+
+@media screen and (max-width: 386px){
+    .grid.first, .grid.second{
+        grid-template-areas: "a" "b" "c" "d";
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid.contact-main {
+    grid-template-columns: 3fr 1fr;
+}
+
+.grid.contact-main > div{
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+}
+
+.grid.contact-main iframe {
+       max-width: 100%;
+}
+
+@media  screen and (max-width: 855px){
+    .grid.contact-main {
+        grid-template-columns:  2fr 1fr;
+    }
+}
+
+@media  screen and (max-width: 660px){
+    .grid.contact-main {
+        grid-template-columns:  1fr 1fr;
+    }
+}
+
+@media  screen and (max-width: 593px){
+    .grid.contact-main {
+        grid-template-columns:  1fr;
+        grid-template-areas: "div";
+    }
+}
+
+.grid.companies > div {
+    flex-direction: column;
+    box-shadow: 0 0 0.5rem -0.25rem black;
+    padding: 1rem;
+}
+
+@media  screen and (max-width: 852px){
+    .grid.grid.companies {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "div div";
+    }
+}
+
+@media  screen and (max-width: 575px){
+    .grid.grid.companies {
+        grid-template-columns: 1fr;
+        grid-template-areas: "div";
+    }
+}
